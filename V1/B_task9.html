@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="" />
+    <title>Task8</title>
+  </head>
+  <body>
+    <div class="light x1"></div>
+    <div class="light x2"></div>
+    <div class="light x3"></div>
+    <div class="light x4"></div>
+    <div class="light x5"></div>
+    <div class="light x6"></div>
+    <div class="light x7"></div>
+    <div class="light x8"></div>
+    <div class="light x9"></div>
+
+    <h1>Расположите данные предложения последовательно, в соответствии с содержанием текста 1В</h1>
+
+    <form onsubmit="return false">
+      <p style="text-align: center; padding-top: 80px">
+        1.	To achieve the degree, students are necessary to undergo military training together with their course work. <br><br>
+        2.	The ROTC program is the largest commissioning basis for the US Army. <br><br>
+        3.	The ROTC program is a college program directing to a commission in the United States Army.<br><br>
+        4.	Army ROTC program has over two hundred and fifty programs and association with over a thousand schools acros<br><br>s the US. 
+        5.	Usually the mission of the Army ROTC Program is to prepare commissioned army officers.<br><br>
+        6.	To gain the degree, students are required to undergo military training alongside your course work.<br><br>
+        7.	The ROTC program was established in 1916 by the government of President Woodrow Wilson.<br><br>
+        8.	Military colleges offer degrees to students. <br><br>
+        9.	The ROTC presently has over twenty thousand enrolled cadets. <br><br>
+        10. ROTC program usually starts recruiting young adults from high school.<br><br>
+        11. There are two levels of training administered. <br><br>
+        12. ROTC programs have developed and now, 20 % of cadets are women. <br><br>
+
+        <label
+          ><span>Ваш ответ:</span>
+          <input id="mainText1" class="startt" type="text" /><br /><br />
+        </label>
+      </p>
+      <input
+        id="checked"
+        class="submit next"
+        type="submit"
+        onclick="myFunction()"
+        value="Проверить"
+      />
+    </form>
+    <p class="nooo"></p>
+
+    <a href="B_task8.html" class="back">Предыдущее задание</a>
+    <a href="B_task10.html" class="next">Следующее задание</a>
+  </body>
+  <script>
+    let a1;
+    let trueAnswer = 0;
+    let storage = window.localStorage;
+
+    function myFunction() {
+      a1 = document.getElementById("mainText1").value;
+
+      if (a1 == "3,5,2,7,9,12,4,10,11,8,6,1") {
+        trueAnswer++;
+      }
+
+      storage.setItem("t99", trueAnswer);
+      storage.setItem("ck99", 1);
+    }
+
+    let sk99 = setInterval(function () {
+      if (storage.getItem("ck99") == 1) {
+        document.getElementById("mainText1").disabled = true;
+        document.getElementById("checked").classList.add("submit_disabled");
+        document.getElementById("checked").disabled = true;
+        if (storage.getItem("t99") == "1") {
+          document.querySelector(".nooo").innerHTML = "Вы ответили верно!";
+          document.querySelector(".nooo").classList.add("task77");
+        } else {
+          document.querySelector(".nooo").innerHTML = "Вы ответили неверно!";
+          document.querySelector(".nooo").classList.add("task777");
+        }
+        clearInterval(sk99);
+      }
+    }, 100);
+  </script>
+</html>

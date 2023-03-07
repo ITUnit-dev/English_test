@@ -1,0 +1,28 @@
+body {
+    font-size: 17px;
+}
+select {
+    
+    font-size: 10px;
+    border-radius: 10px;
+    height: 20px;
+}
+form {
+    text-align: center;
+}
+p {
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+.submit {
+    left: 50px;
+}
+.task4 {
+    position: fixed;
+    bottom: 1px;
+    font-size: 20px;
+    color: green;
+    left: 50%;
+    transform: translateX(-50%);
+
+}

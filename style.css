@@ -1,0 +1,138 @@
+html {
+  cursor: url(cursors/cursor.cur), auto;
+  
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+.button {
+  position: relative;
+  padding: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 3em;
+  margin: 0.8em 0.7em;
+  font-family: "Times New Roman", sans-serif;
+  
+}
+.main {
+    color: #ffffff;    /* цвет текста в кнопке */
+    grid-area: good_button;
+    cursor: url(cursors/cursorSelect.cur), pointer;
+    
+}
+.main::after, .main::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20%;
+      height: 20%;
+      border: 2px solid;
+      transition: all 0.6s ease;
+      border-radius: 2px;
+}
+.main::after {
+      bottom: 0;
+      right: 0;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: #ffffff; /*  до наводки на кнпоку нижняя горизонтальная линия */
+      border-right-color: #ffffff;  /*  до наводки на кнпоку нижняя вертикальная линия */
+}
+.main::before {
+      top: 0;
+      left: 0;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      border-top-color: #ffffff;  /*  до наводки на кнпоку верхняя горизонтальная линия */
+      border-left-color: #ffffff;  /*  до наводки на кнпоку верхняя вертикальная линия */
+}
+.main:hover:after, .main:hover:before {
+      border-bottom-color: #ffffff;
+      border-right-color: #ffffff;
+      border-top-color: #ffffff;
+      border-left-color: #ffffff;
+      width: 100%;
+      height: 100%; }
+.about {
+  margin-top: 25px;
+}
+.exit {
+  margin-top: 20px;
+}
+.exit:hover:after, .exit:hover:before {
+      border-bottom-color: #dd1b45;
+      border-right-color: #dd1b45;
+      border-top-color: #dd1b45;
+      border-left-color: #dd1b45;
+      width: 100%;
+      height: 100%; }
+.exit:hover {
+  color: #702b3a;
+  cursor: url(cursors/cursorUnavailable.cur), pointer;
+}
+html {
+  background: #dac29e;
+  height: 100%;
+}
+
+h1 {
+  height: auto;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  
+  margin-top: 20px;
+  /*position: absolute;*/
+  
+  color: white;
+  font-family: "Times New Roman", sans-serif;
+  font-weight: 500;
+  font-size: 5em;
+  grid-area: main_text;
+}
+.automate_1 {
+  grid-area: auto_1;
+  justify-self: center;
+  margin-top: 0.55em;
+  
+}
+.automate_2 {
+  grid-area: auto_2;
+  justify-self: center;
+  margin-top: 0.55em;
+}
+
+.automate_3 {
+  grid-area: auto_3;
+  justify-self: center;
+  margin-top: 0.55em;
+}
+
+.about {
+  grid-area: about;
+  justify-self: center;
+}
+.exit {
+  grid-area: exit;
+  justify-self: center;
+}
+/* .grid-position {
+  margin-top: 2vh;
+  width: 100%;
+  height: 100%; 
+  padding: 10px;
+} */
+#grid_main {
+ padding-top: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "main_text main_text main_text"
+                       "auto_1 auto_2 auto_3"
+                       "about about about"
+                       "exit exit exit";
+}
