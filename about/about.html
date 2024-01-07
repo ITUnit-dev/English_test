@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>about_program</title>
+</head>
+<style>
+  html {
+    cursor: url(../cursors/cur_exit.cur), auto;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .popout {
+    font-family: Futura, sans-serif;
+    font-weight: 900;
+    font-size: 80px;
+    text-align: center;
+    /* width: 100vw; */
+    left: 0;
+    right: 0;
+    top: 50px;
+    /* width: 1000px; */
+  }
+
+  @-webkit-keyframes ani {
+    0% {
+      transform: translate3d(0, 0, 0);
+      text-shadow: 0em 0em 0 lightblue;
+      color: black;
+    }
+
+    30% {
+      transform: translate3d(0, 0, 0);
+      text-shadow: 0em 0em 0 lightblue;
+      color: black;
+    }
+
+    70% {
+      transform: translate3d(0.08em, -0.08em, 0);
+      text-shadow: -0.08em 0.08em lightblue;
+      color: black;
+    }
+
+    100% {
+      transform: translate3d(0.08em, -0.08em, 0);
+      text-shadow: -0.08em 0.08em lightblue;
+      color: black;
+    }
+  }
+
+  @keyframes ani {
+    0% {
+      transform: translate3d(0, 0, 0);
+      text-shadow: 0em 0em 0 lightblue;
+      color: black;
+    }
+
+    30% {
+      transform: translate3d(0, 0, 0);
+      text-shadow: 0em 0em 0 lightblue;
+      color: black;
+    }
+
+    70% {
+      transform: translate3d(0.08em, -0.08em, 0);
+      text-shadow: -0.08em 0.08em lightblue;
+      color: black;
+    }
+
+    100% {
+      transform: translate3d(0.08em, -0.08em, 0);
+      text-shadow: -0.08em 0.08em lightblue;
+      color: black;
+    }
+  }
+
+  .popout span {
+    position: relative;
+    display: inline-block;
+    -webkit-animation: ani 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+    animation: ani 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  .popout span:nth-last-child(1n) {
+    -webkit-animation-delay: -0.1666666667s;
+    animation-delay: -0.1666666667s;
+  }
+
+  .popout span:nth-last-child(2n) {
+    -webkit-animation-delay: -0.3333333333s;
+    animation-delay: -0.3333333333s;
+  }
+
+  .popout span:nth-last-child(3n) {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  /* ====================
+    Background
+=======================*/
+
+  .background {
+    width: 100vw;
+    height: 100vh;
+    animation: pulse 5s infinite;
+    overflow: hidden;
+  }
+
+  @keyframes pulse {
+    0% {
+      background: #d10053;
+    }
+
+    50% {
+      background: #cc145e;
+    }
+
+    100% {
+      background: #d10053;
+    }
+  }
+
+  .background p {
+    z-index: 999;
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: lato;
+    font-size: 65px;
+    position: absolute;
+
+  }
+
+  .elements {
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* ====================
+      Squares
+=======================*/
+
+  .square {
+    border: 10px dashed #db0f60;
+  }
+
+  .sq2 {
+    animation: move1 180s infinite;
+    animation-timing-function: linear;
+    width: 1110px;
+    height: 1110px;
+  }
+
+  @keyframes move1 {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0.5;
+    }
+
+    50% {
+      width: 1000px;
+      height: 1000px;
+    }
+
+    100% {
+      transform: rotate(1000deg);
+      opacity: 1;
+    }
+  }
+
+  .sq3 {
+    width: 600px;
+    height: 600px;
+    animation: move1 120s infinite;
+    animation-timing-function: linear;
+  }
+
+  .sq1 {
+    width: 500px;
+    height: 500px;
+    animation: move1 100s infinite;
+    animation-timing-function: linear;
+  }
+
+  button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 60px;
+    width: 210px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgb(22 167 134);
+  }
+
+  button span {
+    color: #164ca7;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+  }
+
+  button:hover {
+    animation: rotate 0.7s ease-in-out both;
+    cursor: url(../cursors/cur_exitSelect.cur), pointer;
+  }
+
+  button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }
+</style>
+
+<body>
+  <div class="background">
+    <p class="popout">
+      <span style="animation: none; -webkit-animation: none; color: black;">Эта программа предназначена для проверки
+        знаний!</span><br><br><br>
+      <span>А</span>
+      <span>в</span>
+      <span>т</span>
+      <span>о</span>
+      <span>р</span>
+      <span>ы:</span><br><br>
+
+      <span>I</span>
+      <span>T</span>
+      <span>U</span>
+      <span>n</span>
+      <span>i</span>
+      <span>t</span><br><br>
+
+      <button onclick="window.location.href = '../main.html';">
+        <span>Вернуться в меню</span>
+      </button>
+    </p>
+
+    <div class="elements">
+      <div class="square sq1"></div>
+      <div class="square sq2"></div>
+      <div class="square sq3"></div>
+    </div>
+  </div>
+</body>
+
+</html>

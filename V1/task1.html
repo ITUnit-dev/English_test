@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
     <title>Task1</title>
 </head>
+
 <body>
     <div class='light x1'></div>
     <div class='light x2'></div>
@@ -17,26 +19,44 @@
     <div class='light x9'></div>
     <h1>Проверьте по словарю, правильно ли вы произносите следующие слова и переведите их.</h1>
     <div class="play">
-    <button onclick="new Audio('../audio/adequate-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'адекватный, соответствующий'; return false;">Adequate</button>
-    <button onclick="new Audio('../audio/assure-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'уверять, заверять кого-либо, убеждать'; return false;">Assure</button>
-    <button onclick="new Audio('../audio/proficiency-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'опытность, мастерство, умение'; return false;">Proficiency</button>
-    <button onclick="new Audio('../audio/assign-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'назначать, определять, устанавливать'; return false;">Assign</button>
-    <button onclick="new Audio('../audio/designate-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'объявлять, называть'; return false;">Designate</button>
-    <button onclick="new Audio('../audio/discipline-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'дисциплина, обучение, тренировка'; return false;">Discipline</button>
-    <button onclick="new Audio('../audio/morale-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'моральное состояние; боевой дух'; return false;">Morale</button>
-    <button onclick="new Audio('../audio/vehicle-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'транспортное средство'; return false;">Vehicle</button>
-    <button onclick="new Audio('../audio/require-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'приказывать, требовать'; return false;">Require</button>
-    <button onclick="new Audio('../audio/wire-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'проволока'; return false;">Wire</button>
-    <button onclick="new Audio('../audio/career-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'карьера, успех'; return false;">Career</button>
-    <button onclick="new Audio('../audio/qualified-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'квалифицированный; компетентный, сведущий'; return false;">Qualified</button>
-    <button onclick="new Audio('../audio/further-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'дальнейший, добавочный'; return false;">Further</button>
-    <button onclick="new Audio('../audio/associate-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'объединять, соединять'; return false;">Associate</button>
-    <button onclick="new Audio('../audio/logistical-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'логический, вычислительный'; return false;">Logistical</button>
-    <button onclick="new Audio('../audio/character-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'характер, темперамент, нрав'; return false;">Character</button>
-    <button onclick="new Audio('../audio/tough-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'жёсткий, плотный, упругий'; return false;">Tough</button>
-    <p class="visible" style="display: none;"></p>
+        <button
+            onclick="new Audio('../audio/adequate-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'адекватный, соответствующий'; return false;">Adequate</button>
+        <button
+            onclick="new Audio('../audio/assure-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'уверять, заверять кого-либо, убеждать'; return false;">Assure</button>
+        <button
+            onclick="new Audio('../audio/proficiency-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'опытность, мастерство, умение'; return false;">Proficiency</button>
+        <button
+            onclick="new Audio('../audio/assign-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'назначать, определять, устанавливать'; return false;">Assign</button>
+        <button
+            onclick="new Audio('../audio/designate-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'объявлять, называть'; return false;">Designate</button>
+        <button
+            onclick="new Audio('../audio/discipline-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'дисциплина, обучение, тренировка'; return false;">Discipline</button>
+        <button
+            onclick="new Audio('../audio/morale-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'моральное состояние; боевой дух'; return false;">Morale</button>
+        <button
+            onclick="new Audio('../audio/vehicle-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'транспортное средство'; return false;">Vehicle</button>
+        <button
+            onclick="new Audio('../audio/require-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'приказывать, требовать'; return false;">Require</button>
+        <button
+            onclick="new Audio('../audio/wire-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'проволока'; return false;">Wire</button>
+        <button
+            onclick="new Audio('../audio/career-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'карьера, успех'; return false;">Career</button>
+        <button
+            onclick="new Audio('../audio/qualified-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'квалифицированный; компетентный, сведущий'; return false;">Qualified</button>
+        <button
+            onclick="new Audio('../audio/further-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'дальнейший, добавочный'; return false;">Further</button>
+        <button
+            onclick="new Audio('../audio/associate-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'объединять, соединять'; return false;">Associate</button>
+        <button
+            onclick="new Audio('../audio/logistical-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'логический, вычислительный'; return false;">Logistical</button>
+        <button
+            onclick="new Audio('../audio/character-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'характер, темперамент, нрав'; return false;">Character</button>
+        <button
+            onclick="new Audio('../audio/tough-gb.mp3').play(); visit = document.querySelector('.visible'); visit.style.display = 'block'; visit.innerHTML = 'жёсткий, плотный, упругий'; return false;">Tough</button>
+        <p class="visible" style="display: none;"></p>
     </div>
     <a href="task2.html" class="next">Следующее задание</a>
-    
+
 </body>
+
 </html>

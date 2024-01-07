@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Тест по английскому</title>
@@ -12,28 +13,30 @@
 
 <body>
   <div id="grid_main">
-  <h1>Тест по английскому</h1>
+    <h1>Тест по английскому</h1>
 
-  <button class="automate_1 button main auto">Вариант 1</button>
-  <!-- <button class="automate_2 button main auto">Вариант 2</button>
+    <button class="automate_1 button main auto">Вариант 1</button>
+    <!-- <button class="automate_2 button main auto">Вариант 2</button>
   <button class="automate_3 button main auto">Вариант 3</button> -->
-  <button class="button main about">О программе</button>
-  <button class="button main exit">Выход</button>
-  </div> 
+    <button class="button main about">О программе</button>
+    <button class="button main exit">Выход</button>
+  </div>
 
   <script src='jquery.min.js'></script>
-  <script src='jquery.transit.min.js'></script><script  src="background.js"></script>
+  <script src='jquery.transit.min.js'></script>
+  <script src="background.js"></script>
 
   <script src="test.js"></script>
 </body>
 <script>
-let auto = document.querySelector(".auto");
-auto.addEventListener("click", ()=>{window.localStorage.clear();});
-but = document.querySelector(".exit");
-but.addEventListener("click", butt, false);
-function butt() {
-  window.localStorage.clear();
-  window.close();
-}
+  let auto = document.querySelector(".auto");
+  auto.addEventListener("click", () => { window.localStorage.clear(); });
+  but = document.querySelector(".exit");
+  but.addEventListener("click", butt, false);
+  function butt() {
+    window.localStorage.clear();
+    window.close();
+  }
 </script>
+
 </html>

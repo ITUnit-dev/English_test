@@ -26,41 +26,37 @@ let task4 = document.querySelector(".task4");
 let count = 0;
 let storage = window.localStorage;
 function myFunction() {
+  if (be_1.value == "инфинитив" && be_2.value == "сказуемое") count++;
+  if (set_1.value == "инфинитив" && set_2.value == "обстоятельство") count++;
+  if (exercises_1.value == "глагол" && exercises_2.value == "сказуемое")
+    count++;
+  if (including_1.value == "герундий" && including_2.value == "обстоятельство")
+    count++;
+  if (are_1.value == "эквивалент модального глагола" && are_2.value == "-")
+    count++;
+  if (
+    Executing_1.value == "причастие 1" &&
+    Executing_2.value == "обстоятельство"
+  )
+    count++;
+  if (receive_1.value == "инфинитив" && receive_2.value == "обстоятельство")
+    count++;
+  if (pursue_1.value == "инфинитив" && pursue_2.value == "сказуемое") count++;
+  if (pursuing_1.value == "герундий" && pursuing_2.value == "обстоятельство")
+    count++;
+  if (have_1.value == "эквивалент модального глагола" && have_2.value == "-")
+    count++;
+  if (develop_1.value == "инфинитив" && develop_2.value == "обстоятельство")
+    count++;
 
-        if (be_1.value == "инфинитив" && be_2.value == "сказуемое")
-        count++;
-        if (set_1.value == "инфинитив" && set_2.value == "обстоятельство")
-        count++;
-        if (exercises_1.value == "глагол" && exercises_2.value == "сказуемое")
-        count++;
-        if (including_1.value == "герундий" && including_2.value == "обстоятельство")
-        count++;
-        if (are_1.value == "эквивалент модального глагола" && are_2.value == "-")
-        count++;
-        if (Executing_1.value == "причастие 1" && Executing_2.value == "обстоятельство")
-        count++;
-        if (receive_1.value == "инфинитив" && receive_2.value == "обстоятельство")
-        count++;
-        if (pursue_1.value == "инфинитив" && pursue_2.value == "сказуемое")
-        count++;
-        if (pursuing_1.value == "герундий" && pursuing_2.value == "обстоятельство")
-        count++;
-        if (have_1.value == "эквивалент модального глагола" && have_2.value == "-")
-        count++;
-        if (develop_1.value == "инфинитив" && develop_2.value == "обстоятельство")
-        count++;
-
-storage.setItem("t4", count);
-storage.setItem("ck4", 1);
-
+  storage.setItem("t4", count);
+  storage.setItem("ck4", 1);
 }
-let sk44 = setInterval(function ()
-{
-   if (storage.getItem("ck4") == 1) 
-   {
+let sk44 = setInterval(function () {
+  if (storage.getItem("ck4") == 1) {
     document.getElementById("checked").classList.add("submit_disabled");
-    document.getElementById('checked').disabled = true;
+    document.getElementById("checked").disabled = true;
     task4.innerHTML = "Правильных ответов: " + storage.getItem("t4") + "/11";
     clearInterval(sk44);
-   }
-}, 100)
+  }
+}, 100);
